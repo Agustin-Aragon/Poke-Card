@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Delicious+Handrawn&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(46, 46, 46), rgb(0, 0, 0));
+    height: 100vh;
+}
+
+.txt{
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  background-color: rgba(255, 247, 240, 0.61);
+  z-index: 0;
+  padding: 2px;
+  margin-top: 8px;
+}
+
+.tarjeta {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(73, 73, 73));
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px inset;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    height: 200vh;
+    width: 200vw;
+    animation: girar 5s linear infinite;
+}
+
+/* @keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px inset;
+    background: linear-gradient(rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.171));
+}
+
+h2 {
+    color: red;
+    z-index: 1;
+    background-color: transparent;
+    padding: 30px;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    text-shadow: 2px 2px 6px rgb(102, 100, 100);
+    text-transform: capitalize;
+}
+
+img {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+}
+
+p {
+  color: black;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contenedor_informacion {
+  z-index: 1;
+  width: 94%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.contenedor_informacion p {
+  margin: 0px;
+}
+
+.barra {
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  left: 25%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: #000000;
+}
+
+
+.nombre {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nombre img {
+  background-color: rgba(211, 211, 211, 0.103);
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px inset;
+  padding: 10px;
+  width: 130px;
+  height: 130px;
+}
+
+.tipos {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.tipos img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+::-webkit-meter-optimum-value {
+  background-color: rgba(255, 115, 0, 0.795);
+  /* color llenar barra */
+}
+
+#id {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: rgba(192, 192, 192, 0.699);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  color: rgba(22, 22, 22, 0.89);
+}
+
+.jessie {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  z-index: 0;
+  width: 200px;
+  height: 529px;
+  user-select: none;
+}
+
+.james {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  z-index: 0;
+  width: 121px;
+  height: 529px;
+  user-select: none;
+}
+
+.mew {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  z-index: 0;
+  width: 412px;
+  height: 465px;
+  user-select: none;
+}
+
+
+/* .mewtwo {
+  position: absolute;
+  bottom: 30%;
+  left: 0%;
+  z-index: 0;
+  width: 374px;
+  height: 400px;
+  user-select: none;
+}
+
+.ash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 0;
+  width: 200px;
+  height: 300px;
+  user-select: none;
+} */
+
+@media (max-width: 576px) { 
+  
+  .tarjeta {
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(73, 73, 73));
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px inset;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nombre img {
+  background-color: rgba(211, 211, 211, 0.103);
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px inset;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+
+.contenedor_informacion {
+  z-index: 1;
+  width: 94%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.contenedor_informacion p {
+  margin: 0px;
+}
+
+.barra {
+  z-index: 1;
+  position: absolute;
+  width: 130px;
+  left: 25%;
+}
+
+
+
+}
