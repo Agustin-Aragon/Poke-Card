@@ -37,22 +37,22 @@ body {
     flex-direction: column;
 }
 
-.tarjeta::before {
+/* .tarjeta::before {
     content: "";
     position: absolute;
     height: 200vh;
     width: 200vw;
     animation: girar 5s linear infinite;
-}
+} */
 
-/* @keyframes girar {
+ /* @keyframes girar {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
     }
-} */
+}  */
 
 .tarjeta::after {
     content: "";
@@ -96,22 +96,27 @@ p {
   width: 94%;
   padding-left: 30px;
   padding-right: 30px;
+  gap: 20px;
 }
 
 .contenedor_informacion p {
   margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  justify-content: end;
+  gap: 220px;
+  width: 96%;
 }
 
 .barra {
   z-index: 1;
   position: absolute;
-  width: 200px;
-  left: 25%;
+  width: 180px;
+  margin-left: 10px;
+  margin-right: 30px;
 }
 
 .info {
-  display: flex;
-  justify-content: space-between;
   font-family: "Bangers", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -251,21 +256,54 @@ p {
 .contenedor_informacion {
   z-index: 1;
   width: 94%;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .contenedor_informacion p {
   margin: 0px;
+  display: flex;
+  justify-content: end;
+  gap: 160px;
+  width: 94%;
 }
 
 .barra {
   z-index: 1;
   position: absolute;
-  width: 130px;
-  left: 25%;
+  width: 150px;
+  padding-left: 20px;
+}
+
+.info {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: #000000;
 }
 
 
+.nombre {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#id {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background-color: rgba(192, 192, 192, 0.699);
+  border-radius: 10px;
+  padding: 6px;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  color: rgba(22, 22, 22, 0.89);
+}
 
 }
