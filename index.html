@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Border</title>
+    <title>Poke Card</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="atropos.min.css">
     <link rel="stylesheet" href="color.scss">
@@ -19,43 +19,70 @@
     <img src="assets/ash.png" alt="ash" class="ash"> -->
   </div>
 
-    <!-- <div class="input-group mb-3" style="width: 400px; margin-top: -50px;">
-        <input type="text" class="form-control text-center" placeholder="Ingresar Pokemon" aria-label="Recipient's username" aria-describedby="button-addon2" style="text-transform: capitalize; user-select: none;">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
-    </div> -->
-
+    <div class="input-group mb-3" id="contenedor_buscar">
+        <input type="text" class="form-control text-center" placeholder="Ingresar Pokemon" aria-label="Recipient's username" aria-describedby="button-addon2" style="text-transform: capitalize; user-select: none;" id="buscar" list="buscador">
+        <datalist id="buscador"></datalist>
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="llamarApi()">Buscar</button>
+    </div>
 
     <div class="atropos my-atropos">
         <div class="atropos-scale">
           <div class="atropos-rotate">
             <div class="atropos-inner">
-
               <div class="tarjeta">
-
                 <img src="assets/jessie.png" alt="jessie" class="jessie img-fluid">
                 <img src="assets/james.png" alt="james" class="james">
                 <img src="assets/mew.png" alt="mew" class="mew">
 
-                <p id="id" data-atropos-offset="0">#006</p>
-                <div class="nombre">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="icono pokemon" data-atropos-offset="5">
-                    <p data-atropos-offset="0" class="text-capitalize txt">charizard</p>
+                  <p id="id" data-atropos-offset="0">#001</p>
+
+                <div class="cont_foto">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="icono pokemon" data-atropos-offset="5" id="img">
+                    <p data-atropos-offset="0" class="text-capitalize" id="nombre">bulbasaur</p>
                 </div>
                 <div class="tipos" data-atropos-offset="5">
-                    <img src="icon/fire.png" alt="tipo 1">
-                    <img src="icon/flying.png" alt="tipo 2">
+                    <img src="icon/grass.png" alt="tipo 1" id="tipo_1">
+                    <img src="icon/poison.png" alt="tipo 2" id="tipo_2">
                 </div>
                 
-                <div class="contenedor_informacion">
-                    <p data-atropos-offset="0" class="info">HP<meter class="barra" min="0" max="255" value="78"></meter>78</p>
-                    <p data-atropos-offset="0" class="info">ATTACK<meter class="barra" min="0" max="255" value="84"></meter>84</p>
-                    <p data-atropos-offset="0" class="info">DEFENSE<meter class="barra" min="0" max="255" value="78"></meter>78</p>
-                    <p data-atropos-offset="0" class="info">S-ATTACK<meter class="barra" min="0" max="255" value="109"></meter>109</p>
-                    <p data-atropos-offset="0" class="info">S-DEFENSE<meter class="barra" min="0" max="255" value="85"></meter>85</p>
-                    <p data-atropos-offset="0" class="info">SPEED<meter class="barra" min="0" max="255" value="100"></meter>100</p>
-                </div>
-                
+                <div class="contenedor_informacion" data-atropos-offset="0">
+                  
+                  <div class="info">
+                    <p>HP</p>
+                    <meter min="0" max="255" value="45" class="hp"></meter>
+                    <span id="hp">45</span>
+                  </div>
 
+                  <div class="info">
+                    <p>ATTACK</p>
+                    <meter min="0" max="255" value="49" class="atk"></meter>
+                    <span id="atk">49</span>
+                  </div>
+
+                  <div class="info">
+                    <p>DEFENSE</p>
+                    <meter min="0" max="255" value="49" class="def"></meter>
+                    <span id="def">49</span>
+                  </div>
+
+                  <div class="info">
+                    <p>S-ATTACK</p>
+                    <meter min="0" max="255" value="49" class="s_atk"></meter>
+                    <span id="s_atk">49</span>
+                  </div>
+
+                  <div class="info">
+                    <p>S-DEFENSE</p>
+                    <meter min="0" max="255" value="65" class="s_def"></meter>
+                    <span id="s_def">65</span>
+                  </div>
+
+                  <div class="info">
+                    <p>SPEED</p>
+                    <meter min="0" max="255" value="65" class="speed"></meter>
+                    <span id="speed">65</span>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
